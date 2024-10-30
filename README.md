@@ -8,7 +8,7 @@
 
 # Overview
 
-**This is a GAS library for unzipping a Zip file protected by a password using Google Apps Script.**
+**This is a GAS library for unzipping a Zip file protected by a password using Google Apps Script - v8 engine.**
 
 <a name="description"></a>
 
