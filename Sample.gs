@@ -1,18 +1,18 @@
 
-
 function sample() {
-  var id = "FILE_ID"; // File ID of Zip file.
-  var pass = "PASSWORD"; // Password.
+  const fileId = "FILE_ID"; // File ID of Zip file.
+  const password = "PASSWORD"; // Password.
 
-  var blob = DriveApp.getFileById(id).getBlob();
-  var res = unzip(blob, { password: pass }); // or UnzipGs.unzip(blob);
-  res.forEach(function(e) {
-    Logger.log(
+  const blob = DriveApp.getFileById(fileId).getBlob();
+  const extractedFiles = unzip(blob, { password: password }); // or UnzipGs.unzip(blob); if used as a lib.
+
+  extractedFiles.forEach(file => {
+    console.info(
       "filename: %s, mimeType: %s, size: %s",
-      e.getName(),
-      e.getContentType(),
-      e.getBytes().length
+      file.getName(),
+      file.getContentType(),
+      file.getBytes().length
     );
-    console.log(e.getDataAsString())
+    console.info(file.getDataAsString());
   });
 }

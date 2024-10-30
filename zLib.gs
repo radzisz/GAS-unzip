@@ -36,10 +36,3 @@ t.r=function(a,b){var c;this.G||$(this);c=this.G[a];c===r&&l(Error(a+" not found
 e+g);break;case sa.M:m=(new I(this.input,{index:e,bufferSize:k.J})).r();break;default:l(Error("unknown compression type"))}if(this.ba){var u=r,n,E="number"===typeof u?u:u=0,A=m.length;n=-1;for(E=A&7;E--;++u)n=n>>>8^C[(n^m[u])&255];for(E=A>>3;E--;u+=8)n=n>>>8^C[(n^m[u])&255],n=n>>>8^C[(n^m[u+1])&255],n=n>>>8^C[(n^m[u+2])&255],n=n>>>8^C[(n^m[u+3])&255],n=n>>>8^C[(n^m[u+4])&255],n=n>>>8^C[(n^m[u+5])&255],n=n>>>8^C[(n^m[u+6])&255],n=n>>>8^C[(n^m[u+7])&255];p=(n^4294967295)>>>0;k.p!==p&&l(Error("wrong crc: file=0x"+
 k.p.toString(16)+", data=0x"+p.toString(16)))}return m};t.L=function(a){this.j=a};function wa(a,b,c){c^=a.s(b);a.k(b,c);return c}t.k=U.prototype.k;t.S=U.prototype.T;t.s=U.prototype.s;v("Zlib.Unzip",V);v("Zlib.Unzip.prototype.decompress",V.prototype.r);v("Zlib.Unzip.prototype.getFilenames",V.prototype.Y);v("Zlib.Unzip.prototype.setPassword",V.prototype.L);}).call(this);
 
-
-//   }
-//   return new Zlib.Unzip(blob, options);
-
-// }
-
-
